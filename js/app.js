@@ -87,10 +87,13 @@ function SalmonCook(name, minCusHour, maxCusHour, avgCusHour) {
     this.avgCusHour = avgCusHour;
     this.randHours = [];
     this.avgCookies = [];
-    // this.totalAvgHour1 = new Array(2);
+    this.totalAvgHour1 = new Array(2);
     this.total = 0;
-    this.total1=0;
-    this.total2=0;
+    this.total1=[];
+    
+    this.total2=[];
+    // this.total3 =0;
+    // this.total4=[];
 
 
 
@@ -128,11 +131,9 @@ SalmonCook.prototype.totalAvg = function () {
 
     for (let j = 0; j < hours.length; j++) {
         this.total = this.total + this.avgCookies[j];
-
-
-
-
     }
+
+    this.total1.push(this.total);
     console.log(this.total);
 
 
@@ -140,11 +141,14 @@ SalmonCook.prototype.totalAvg = function () {
 
 SalmonCook.prototype.totalAvghour = function () {
 
-    for(let i=0;i<salmoncookarr;i++){
-
+    for(let i=0;i<salmoncookarr.length;i++){
+        
+        
        
-    for (let j = 0; j <this.hours.length ; j++) {
-        this.total1=this.total1+this.avgCookies[i,j];
+    for (let j = 0; j < this.avgCookies.length; j++) {
+
+       this.total3=this.total3+this.avgCookies[j];
+
         
 
 
@@ -152,7 +156,7 @@ SalmonCook.prototype.totalAvghour = function () {
 
     }
 }
-    console.log(this.total1);
+    console.log(this.total3);
 
 
 }
@@ -176,6 +180,7 @@ SalmonCook.prototype.render = function () {
 
     let rowElement1 = document.createElement('tr')
     tableElement.appendChild(rowElement1);
+
     let dataElement = document.createElement('td');
     rowElement1.appendChild(dataElement);
     dataElement.textContent = this.name;
@@ -188,9 +193,10 @@ SalmonCook.prototype.render = function () {
 
 
     }
-    let dataElement2 = document.createElement('td');
-        rowElement1.appendChild(dataElement2);
-        dataElement2.textContent = this.total1;
+    
+    let dataElement4 = document.createElement('td');
+        rowElement1.appendChild(dataElement4);
+        dataElement4.textContent = this.total1;
 
 
     
@@ -229,9 +235,12 @@ let lima = new SalmonCook('Lima', 2, 16, 4.6);
 for (let i = 0; i < salmoncookarr.length; i++) {
     salmoncookarr[i].getRandomHours();
     salmoncookarr[i].getAvgCookies();
+    salmoncookarr[i].totalAvg();
+    
+    salmoncookarr[i].totalAvghour();
+
     salmoncookarr[i].render();
-     salmoncookarr[i].totalAvg();
-    //salmoncookarr[i].totalAvghour();
+     
 
 
 
