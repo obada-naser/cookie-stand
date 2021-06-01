@@ -87,12 +87,10 @@ function SalmonCook(name, minCusHour, maxCusHour, avgCusHour) {
     this.avgCusHour = avgCusHour;
     this.randHours = [];
     this.avgCookies = [];
-    this.totalAvgHour1 = new Array(2);
+    // this.totalAvgHour1 = new Array(2);
     this.total = 0;
-    this.total1=[];
     
-    this.total2=[];
-    // this.total3 =0;
+    // this.total3 =[];
     // this.total4=[];
 
 
@@ -131,35 +129,39 @@ SalmonCook.prototype.totalAvg = function () {
 
     for (let j = 0; j < hours.length; j++) {
         this.total = this.total + this.avgCookies[j];
+        
+
     }
 
-    this.total1.push(this.total);
     console.log(this.total);
 
 
 }
 
-SalmonCook.prototype.totalAvghour = function () {
+// SalmonCook.prototype.totalAvghour = function () {
 
-    for(let i=0;i<salmoncookarr.length;i++){
+
+//     for(let i=0;i<hours.length;i++){
         
-        
+//         this.total2=0;
        
-    for (let j = 0; j < this.avgCookies.length; j++) {
+//     for (let j = 0; j < this.salmoncookarr; j++) {
 
-       this.total3=this.total3+this.avgCookies[j];
+
+
+       
 
         
 
 
 
 
-    }
-}
-    console.log(this.total3);
+//     }
+// }
+//     console.log(this.total3);
 
 
-}
+// }
 
 
 
@@ -196,7 +198,7 @@ SalmonCook.prototype.render = function () {
     
     let dataElement4 = document.createElement('td');
         rowElement1.appendChild(dataElement4);
-        dataElement4.textContent = this.total1;
+        dataElement4.textContent = this.total;
 
 
     
@@ -237,8 +239,6 @@ for (let i = 0; i < salmoncookarr.length; i++) {
     salmoncookarr[i].getAvgCookies();
     salmoncookarr[i].totalAvg();
     
-    salmoncookarr[i].totalAvghour();
-
     salmoncookarr[i].render();
      
 
@@ -256,24 +256,43 @@ function footer() {
 
     let rowElement2 = document.createElement('tr');
     tableElement.appendChild(rowElement2);
-    let footElement = document.createElement('td');
+    let footElement = document.createElement('th');
     rowElement2.appendChild(footElement);
     footElement.textContent = 'Total';
+    
+    let wholeTotal=0;
+    
 
     for (let i = 0; i < hours.length; i++) {
+        let total2=0;
+        for (let j = 0; j < salmoncookarr.length; j++) {
+            total2=total2+salmoncookarr[j].avgCookies[i];
+             wholeTotal=wholeTotal+salmoncookarr[j].avgCookies[i];
+            
+        }
 
-        tableElement.appendChild(rowElement2);
-        let footElement = document.createElement('td');
+    
+
+        
+        let footElement= document.createElement('th');
         rowElement2.appendChild(footElement);
-        // footElement.textContent = salmoncookarr[i];
+         footElement.textContent = total2;
 
 
     }
+    let footElement1 = document.createElement('th');
+        rowElement2.appendChild(footElement1);
+         footElement1.textContent = wholeTotal;
+    
+
+        
+   }
 
 
-}
 
-footer();
+
+
+ footer();
 
 
 //  for(let i=0;i<hours.length;i++){
