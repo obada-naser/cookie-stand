@@ -1,0 +1,36 @@
+body{ 
+    margin:0%;
+  
+    background: #3aa6d1;
+  
+    
+  
+  
+  }
+  
+  header{
+  
+    color:hsl(200, 84%, 38%);
+    background-color: #b8cddb;
+    height:80px ;
+    
+  }
+  header nav{
+    float: right;
+    width: 30%;
+    margin-top: 14px;
+    margin-right:52px;
+  
+  }
+
+  header nav ul li{
+  
+    display: inline-block;
+    margin-right: 11px;
+  }
+  header nav ul li a{
+    color: hsl(200, 84%, 38%);
+    text-decoration: none;
+  
+  }
+  
