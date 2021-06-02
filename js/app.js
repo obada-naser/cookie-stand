@@ -63,7 +63,7 @@ function heading() {
 
 
 
-heading();
+
 
 
 
@@ -138,30 +138,8 @@ SalmonCook.prototype.totalAvg = function () {
 
 }
 
-// SalmonCook.prototype.totalAvghour = function () {
 
 
-//     for(let i=0;i<hours.length;i++){
-        
-//         this.total2=0;
-       
-//     for (let j = 0; j < this.salmoncookarr; j++) {
-
-
-
-       
-
-        
-
-
-
-
-//     }
-// }
-//     console.log(this.total3);
-
-
-// }
 
 
 
@@ -214,25 +192,22 @@ SalmonCook.prototype.render = function () {
 
 
 
+
+
+
+
+
+
+
 let seatle = new SalmonCook('Seatle', 23, 65, 6.5);
 let tokyo = new SalmonCook('Tokyo', 3, 24, 1.2);
 let dubai = new SalmonCook('Dubai', 11, 38, 3.7);
 let paris = new SalmonCook('Paris', 20, 38, 2.3);
 let lima = new SalmonCook('Lima', 2, 16, 4.6);
 
-
-
-
-
-// seatle.getRandomHours();
-// seatle.getAvgCookies();
-// seatle.render();
-// console.log(seatle);
-
-
-
-
+heading();
 //object for every city:
+
 
 for (let i = 0; i < salmoncookarr.length; i++) {
     salmoncookarr[i].getRandomHours();
@@ -247,10 +222,99 @@ for (let i = 0; i < salmoncookarr.length; i++) {
 }
 
 
+// seatle.getRandomHours();
+// seatle.getAvgCookies();
+// seatle.render();
+// console.log(seatle);
 
 
 
 
+//making an event:
+
+//getting parent element 
+let newCity= document.getElementById('newerCity')
+
+//add event listner
+newCity.addEventListener('submit',patcookie);
+
+//make the function of the event:
+function patcookie(event) {
+    event.preventDefault();
+    let cityName=event.target.locationName.value;
+    let minHour=Math.abs(event.target.minField.value);
+    let maxHour=Math.abs(event.target.maxField.value);
+    let avgcookies=Math.abs(event.target.avgCookies.value);
+
+    let addNewLocation=new SalmonCook(cityName,minHour,maxHour,avgcookies)
+   
+
+   
+    
+      tableElement.removeChild(tableElement.lastChild);
+
+    
+        
+
+        addNewLocation.getRandomHours();
+        addNewLocation.getAvgCookies();
+        addNewLocation.totalAvg();
+        
+        addNewLocation.render();
+
+ 
+        footer();
+
+
+
+
+}
+
+
+
+
+footer();
+
+ 
+ 
+
+ 
+     
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//footer 
 
 function footer() {
 
@@ -283,31 +347,26 @@ function footer() {
     let footElement1 = document.createElement('th');
         rowElement2.appendChild(footElement1);
          footElement1.textContent = wholeTotal;
+
+    
     
 
         
    }
 
+   
 
 
 
 
- footer();
-
-
-//  for(let i=0;i<hours.length;i++){
-//      for(let j=0;j<h;j++){
-
-
-//      }
-//  }
+ 
 
 
 
 
 
 
-// footer function:
+
 
 
 
