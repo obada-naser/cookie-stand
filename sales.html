@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>sales</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -18,12 +20,47 @@
             </ul>
         </nav>
 
-        <img src="https://codefellows.github.io/code-201-guide/curriculum/class-06/lab/assets/salmon.png" alt="Salmon Cookies" width="300px">
+        <img src="https://codefellows.github.io/code-201-guide/curriculum/class-06/lab/assets/salmon.png"
+            alt="Salmon Cookies" width="300px">
+            
+            
 
     </header>
     <main>
-        <div id="cookies">
+        <br>
+            <br>
+        <form id="newerCity">
+            <fieldset>
 
+
+                <label for="locationName">Location</label>
+                <input type="text" id="locationName" name="locationName" required>
+                <br>
+                <br>
+                <label for="minField">Minimum number of customers per hour</label>
+                <input type="number"  id="minField" name="minField" required>
+                <br>
+                <br>
+                <label for="minField">Maximum number of customers per hour</label>
+                <input type="number"  id="maxField" name="maxField" required>
+                <br>
+                <br>
+                <label for="avgCookies">Average number of cookies per hour</label>
+                <input type="number" step="any" id="avgCookies" name="avgCookies" required>
+                <br>
+                <br>
+                <input type="submit"  value="click here to submit">
+                <br>
+                <br>
+                
+
+
+
+
+            </fieldset>
+        </form>
+
+        <div id="cookies">
 
         </div>
 
@@ -35,6 +72,7 @@
 
 
     </footer>
-    
+
 </body>
+
 </html>
