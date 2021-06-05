@@ -5,14 +5,14 @@
 
 let hours = []
 for (let i = 6; i <= 11; i++) {
-    hours.push(i + ':00 am' + ' ');
+    hours.push(i +' '+ ':00 am' );
 
 }
 
-hours[6] = '12 pm' + ' ';
+hours[6] = ' '+'12:00 pm';
 
 for (let i = 1; i <= 7; i++) {
-    hours.push(i + ':00 pm' + ' ')
+    hours.push(i + ' '+ ':00 pm' );
 
 }
 
