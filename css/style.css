@@ -1,25 +1,50 @@
+*{
+
+font-family: serif;
+
+}
+
+
+
+
 body{ 
     margin:0%;
+
   
     background: #3aa6d1;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   
     
   
   
   }
+  
   
   header{
   
     color:hsl(200, 84%, 38%);
     background-color: #b8cddb;
     height:80px ;
+    position: relative;
     
+  }
+
+  header h1{
+    position: absolute;
+    left: 46%;
+    font-weight: bolder;
+    font-size:xx-large;
+    text-align: center;
+    font-family: 'ZCOOL KuaiLe', cursive;
   }
   header nav{
     float: right;
     width: 30%;
-    margin-top: 14px;
-    margin-right:52px;
+    margin-top: 33px;
+    margin-right: -17px;
   
   }
 
@@ -30,13 +55,66 @@ body{
   }
   header nav ul li a{
     color: hsl(200, 84%, 38%);
+    font-family: 'ZCOOL KuaiLe', cursive;
     text-decoration: none;
   
   }
+  /* table{
+    position: absolute;
+    margin-left: 11%;
+  } */
 
-  #cookies table{
-    border:22px;
+ table,th,td{
+
+    border: 2px solid black;
+    border-collapse: collapse;
+
+    margin-left: 11%;
+    
+  }
+
+  fieldset{
+
+    border: 5px solid black;
+   
+  }
+
+
+  footer{
+    width: 100%;
+    /* margin-top: 25px;; */
+    margin-top: auto;
+    height: 92px;
+    
+   
+    background-color: #b8cddb;
+     
+  }
+
+  footer h1{
+    color:hsl(200, 84%, 38%);;
+   text-align: center;
+   padding: 33px;
+
+
+  
   }
 
   
   
+  #family{
+    float: right;
+    margin-top: -116px;
+    margin-right: 76px;
+  }
+
+  #container1{
+
+    margin-bottom: 177px;
+  }
+
+  #container2{
+    
+float: left;
+
+  }
