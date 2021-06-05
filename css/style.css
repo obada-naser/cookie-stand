@@ -88,7 +88,19 @@ body{
     border: 5px solid black;
    
   }
+  input[type=text]{
+    border:2px solid red;
+    border-radius: 4px;
 
+  }
+input[type=number]{
+  border:2px solid rgb(189, 255, 47);
+  border-radius: 5px;
+
+  
+
+
+}
 
   footer{
     width: 100%;
