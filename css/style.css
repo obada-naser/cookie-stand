@@ -1,6 +1,6 @@
 *{
 
-font-family: serif;
+font-family: Arial, Helvetica, sans-serif;
 
 }
 
@@ -39,6 +39,7 @@ body{
     font-size:xx-large;
     text-align: center;
     font-family: 'ZCOOL KuaiLe', cursive;
+
   }
   header nav{
     float: right;
@@ -59,17 +60,26 @@ body{
     text-decoration: none;
   
   }
+  a:hover{
+    background-color: brown;
+  }
   /* table{
     position: absolute;
     margin-left: 11%;
   } */
 
+  table{
+    background-image: url("https://thumbs.dreamstime.com/b/cup-coffee-office-desk-wood-table-background-laptop-computer-glasses-fresh-flower-top-view-copy-space-wooden-115762239.jpg");
+  }
+
  table,th,td{
+
 
     border: 2px solid black;
     border-collapse: collapse;
 
-    margin-left: 11%;
+    margin-left: 5%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     
   }
 
@@ -78,7 +88,19 @@ body{
     border: 5px solid black;
    
   }
+  input[type=text]{
+    border:2px solid red;
+    border-radius: 4px;
 
+  }
+input[type=number]{
+  border:2px solid rgb(189, 255, 47);
+  border-radius: 5px;
+
+  
+
+
+}
 
   footer{
     width: 100%;
@@ -105,16 +127,40 @@ body{
   #family{
     float: right;
     margin-top: -116px;
-    margin-right: 76px;
+    margin-right: 16px;
   }
+
+  
 
   #container1{
 
     margin-bottom: 177px;
   }
 
-  #container2{
+  .container2{
     
-float: left;
+display: block;
+margin: auto;
+margin-top: 10px;
+margin-bottom: 10px;
+
 
   }
+  .image1{
+    display: inline-block;
+    margin: 15px;
+    width: 30%s;
+
+  }
+
+  #information h1{
+    margin-left: 3px;
+  }
+
+#fish5{
+  margin-left: 324px;
+}
+#container3{
+
+  text-align: center;
+}
